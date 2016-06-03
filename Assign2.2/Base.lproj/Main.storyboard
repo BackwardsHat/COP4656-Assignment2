@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1712" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,69 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttR-HL-DJc">
+                                <rect key="frame" x="220" y="127" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="37E-uo-kgH"/>
+                                    <constraint firstAttribute="width" constant="160" id="Mbz-gw-RHQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qwj-tz-W76">
+                                <rect key="frame" x="220" y="165" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="K87-GL-O27"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGp-5L-jli">
+                                <rect key="frame" x="220" y="203" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GoD-I6-GOc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggested Medications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSl-Dw-Hsv">
+                                <rect key="frame" x="129" y="74" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="FGX-kz-EhO"/>
+                                    <constraint firstAttribute="height" constant="45" id="gM8-Hd-3pW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlt-7H-VUV">
+                                <rect key="frame" x="0.0" y="327" width="600" height="162"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qwj-tz-W76" firstAttribute="leading" secondItem="ttR-HL-DJc" secondAttribute="leading" id="4Dk-SW-U26"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dlt-7H-VUV" secondAttribute="bottom" constant="111" id="7Kf-2q-teg"/>
+                            <constraint firstItem="AGp-5L-jli" firstAttribute="centerX" secondItem="Dlt-7H-VUV" secondAttribute="centerX" id="8rS-kX-gBZ"/>
+                            <constraint firstItem="AGp-5L-jli" firstAttribute="top" secondItem="qwj-tz-W76" secondAttribute="bottom" constant="8" symbolic="YES" id="BDR-w6-XZh"/>
+                            <constraint firstAttribute="trailing" secondItem="Dlt-7H-VUV" secondAttribute="trailing" id="HiE-TV-pyk"/>
+                            <constraint firstItem="ttR-HL-DJc" firstAttribute="top" secondItem="rSl-Dw-Hsv" secondAttribute="bottom" constant="8" symbolic="YES" id="JDo-i9-yGl"/>
+                            <constraint firstItem="qwj-tz-W76" firstAttribute="top" secondItem="ttR-HL-DJc" secondAttribute="bottom" constant="8" symbolic="YES" id="Kww-qT-AfW"/>
+                            <constraint firstItem="ttR-HL-DJc" firstAttribute="centerX" secondItem="rSl-Dw-Hsv" secondAttribute="centerX" id="Wqs-sm-kXW"/>
+                            <constraint firstItem="qwj-tz-W76" firstAttribute="trailing" secondItem="AGp-5L-jli" secondAttribute="trailing" id="cfK-Jj-mxU"/>
+                            <constraint firstItem="qwj-tz-W76" firstAttribute="trailing" secondItem="ttR-HL-DJc" secondAttribute="trailing" id="fA1-cN-C2D"/>
+                            <constraint firstItem="Dlt-7H-VUV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fBu-RC-pcZ"/>
+                            <constraint firstItem="qwj-tz-W76" firstAttribute="leading" secondItem="AGp-5L-jli" secondAttribute="leading" id="l2F-vG-LTg"/>
+                            <constraint firstItem="rSl-Dw-Hsv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="po9-1G-2ya"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="Dlt-7H-VUV" id="HHN-jR-p1N"/>
+                        <outlet property="textbox1" destination="ttR-HL-DJc" id="dLB-3v-P08"/>
+                        <outlet property="textbox2" destination="qwj-tz-W76" id="JmA-Jq-Mfj"/>
+                        <outlet property="textbox3" destination="AGp-5L-jli" id="BbH-ll-0Tz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+@property (weak, nonatomic) IBOutlet UITextField *textbox3;
+@property (weak, nonatomic) IBOutlet UITextField *textbox2;
+@property (weak, nonatomic) IBOutlet UITextField *textbox1;
+@property (nonatomic, retain) NSArray* pickerData;
+
+- (void) changeTextBoxesOnPick:(NSInteger) row;
 
 @end
 
